@@ -1,38 +1,39 @@
+import React from "react";
 import { Field } from "formik";
 import Label from './Label'
 
-
-interface IProps {
+interface IRadio {
   name: string;
-  options?: IOptions[];
+  options?: IRadioOption[];
   [rest: string]: any;
 }
 
-interface IOptions {
+export interface IRadioOption {
+  key: string;
   value: string;
-  label: string;
 }
 
-const Input: React.FC<IProps> = ({ name, options, ...rest }) => { 
+const Input: React.FC<IRadio> = ({ name, options, ...rest }) => { 
   return (
-    <Field name={name} id={name} {...rest} className="Form-radio">
+    <Field name={name} id={name} {...rest} >
       {
-        (field: {}) => (
-          options && options.map(option => {
-            return(
-              <>
-                <input
-                  type="radio" value={option.value}
-                  key={option.value} id={option.value}
-                  checked={field === option.value}
-                  className='capitalize'
-                  {...field}
-                />
-                <Label name={name} label={option.label} />
-              </>
-            )
-          })
-        )
+        ({ field }: any) => {
+          return (
+            options && options.map(option => {
+              return(
+                <div key={option.value} className="flex items-center mb-2" >
+                  <Field
+                    type="radio" id={option.value}
+                    {...field}
+                    value={option.value} className="Form-radio ring-blue-600"
+                    checked={field.value === option.value}
+                  />
+                  <Label name={option.value} label={option.key} />
+                </div>
+              )
+            })
+          )
+        }
       }
     </Field>
   )

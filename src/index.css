@@ -2,15 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import "tailwindComponents/alert.css";
-@import "tailwindComponents/buttons.css";
-@import "tailwindComponents/form.css";
-
 @tailwind components;
 
 @layer components {
   @import "tailwindComponents/alert.css";
-  @import "tailwindComponents/form.css";
+  @import "tailwindComponents/formik.css";
   @import "tailwindComponents/buttons.css";
 }

@@ -29,26 +29,15 @@ const FormControl: React.FC<IProps> = ({ control, className, name, label, ...res
     case 'date':
       formControl = <Date name={name} {...rest}  />
       break;
-    default:
-      formControl = <p className='text-center'>Not Found</p>
-      break;
   }
   return (
-    <>
-      {
-        <div className={className}>
-        {
-          label ?
-            <Label name={name} label={label}/>
-          : <></>
-        }
-        <div className="flex flex-col">
-          {formControl}
-          <ErrorMessage name={name} />
-        </div>
-      </div>
-      }
-    </>
+    <div className={className}>
+    { label ? <Label name={name} label={label}/>: <></> }
+    <div className="flex flex-col">
+      {formControl}
+      <ErrorMessage name={name} />
+    </div>
+  </div>
   )
 }
 

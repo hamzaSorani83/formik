@@ -1,0 +1,86 @@
+.FormWrapper {
+  @apply flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full gap-6 mb-24
+}
+.Form {
+  @apply xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12  md:mb-0
+}
+.Form-input, .Form-textarea {
+  @apply block text-gray-700 bg-white rounded w-full px-4 py-2 text-xl font-normal bg-clip-padding border-2 border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none mb-2
+}
+.Form-radio {
+  @apply mr-2 w-4 h-4 bg-gray-100 border-gray-300 dark:ring-offset-gray-700 dark:bg-gray-600 dark:border-gray-500
+}
+.Form-select {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+  focus-visible:outline-none block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+}
+
+.Form-Blue .Form-input,
+.Form-Blue .Form-textarea,
+.Form-Blue .Form-select {
+  @apply focus:border-blue-600 focus:ring-blue-500
+}
+.Form-Blue .Form-radio {
+  @apply accent-blue-600
+}
+.Form-Purple .Form-input,
+.Form-Purple .Form-textarea,
+.Form-Purple .Form-select {
+  @apply focus:border-purple-600 focus:ring-purple-600
+}
+
+.Form-Purple .Form-radio {
+  @apply accent-purple-500
+}
+.Form-Success .Form-input,
+.Form-Success .Form-textarea,
+.Form-Success .Form-select {
+  @apply focus:border-green-500 focus:ring-green-500
+}
+.Form-Success .Form-radio {
+  @apply accent-green-600
+}
+.Form-Danger .Form-input,
+.Form-Danger .Form-textarea,
+.Form-Danger .Form-select {
+  @apply focus:border-red-600 focus:ring-red-600
+} 
+.Form-Danger .Form-radio {
+  @apply accent-red-500
+}
+.Form-Warning .Form-input,
+.Form-Warning .Form-textarea,
+.Form-Warning .Form-select {
+  @apply focus:border-yellow-500 focus:ring-yellow-500
+}
+.Form-Warning .Form-radio {
+  @apply accent-yellow-400
+}
+.Form-Info .Form-input,
+.Form-Info .Form-textarea,
+.Form-Info .Form-select {
+  @apply focus:border-blue-400 focus:ring-blue-400
+}
+.Form-Info .Form-radio {
+  @apply accent-blue-400
+}
+.Form-Light .Form-input,
+.Form-Light .Form-textarea,
+.Form-Light .Form-select {
+  @apply focus:border-gray-200 focus:ring-gray-200
+}
+.Form-Light .Form-radio {
+  @apply accent-gray-400
+}
+.Form-Dark .Form-input,
+.Form-Dark .Form-textarea,
+.Form-Dark .Form-select {
+  @apply focus:border-gray-800 focus:ring-gray-800
+}
+.Form-Dark .Form-radio {
+  @apply  accent-gray-800
+}
+
+button[type=submit] {
+  @apply mt-2
+}

@@ -1,20 +1,20 @@
 import { Field } from "formik";
 
 
-interface IProps {
+export interface ISelect {
   name: string;
   options?: string[];
   [rest: string]: any;
 }
 
 
-const Input: React.FC<IProps> = ({ name, options,...rest }) => {
+const Input: React.FC<ISelect> = ({ name, options,...rest }) => {
   
   return (
     <Field as="select" name={name} id={name} {...rest} className="Form-select" >
       <option
         value={''}
-        className='text-capitalize'>
+        className='capitalize'>
         {'-- Select One --'}
       </option>
       {
@@ -23,7 +23,7 @@ const Input: React.FC<IProps> = ({ name, options,...rest }) => {
             <option
               value={option}
               key={option}
-              className='text-capitalize'>
+              className='capitalize'>
               {option}
             </option>
           )
