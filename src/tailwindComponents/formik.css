@@ -14,70 +14,89 @@
   @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
   focus-visible:outline-none block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
 }
+.Form-date {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus-visible:outline-none
+}
 
 .Form-Blue .Form-input,
 .Form-Blue .Form-textarea,
-.Form-Blue .Form-select {
+.Form-Blue .Form-select,
+.Form-Blue .Form-date {
   @apply focus:border-blue-600 focus:ring-blue-500
 }
-.Form-Blue .Form-radio {
+.Form-Blue .Form-radio ,
+.Form-Blue .Form-checkbox {
   @apply accent-blue-600
 }
 .Form-Purple .Form-input,
 .Form-Purple .Form-textarea,
-.Form-Purple .Form-select {
+.Form-Purple .Form-select,
+.Form-Purple .Form-date {
   @apply focus:border-purple-600 focus:ring-purple-600
 }
 
-.Form-Purple .Form-radio {
+.Form-Purple .Form-radio ,
+.Form-Purple .Form-checkbox {
   @apply accent-purple-500
 }
 .Form-Success .Form-input,
 .Form-Success .Form-textarea,
-.Form-Success .Form-select {
+.Form-Success .Form-select,
+.Form-Success .Form-date {
   @apply focus:border-green-500 focus:ring-green-500
 }
-.Form-Success .Form-radio {
+.Form-Success .Form-radio ,
+.Form-Success .Form-checkbox {
   @apply accent-green-600
 }
 .Form-Danger .Form-input,
 .Form-Danger .Form-textarea,
-.Form-Danger .Form-select {
+.Form-Danger .Form-select,
+.Form-Danger .Form-date {
   @apply focus:border-red-600 focus:ring-red-600
 } 
-.Form-Danger .Form-radio {
+.Form-Danger .Form-radio ,
+.Form-Danger .Form-checkbox {
   @apply accent-red-500
 }
 .Form-Warning .Form-input,
 .Form-Warning .Form-textarea,
-.Form-Warning .Form-select {
+.Form-Warning .Form-select,
+.Form-Warning .Form-date {
   @apply focus:border-yellow-500 focus:ring-yellow-500
 }
-.Form-Warning .Form-radio {
+.Form-Warning .Form-radio ,
+.Form-Warning .Form-checkbox {
   @apply accent-yellow-400
 }
 .Form-Info .Form-input,
 .Form-Info .Form-textarea,
-.Form-Info .Form-select {
+.Form-Info .Form-select,
+.Form-Info .Form-date {
   @apply focus:border-blue-400 focus:ring-blue-400
 }
-.Form-Info .Form-radio {
+.Form-Info .Form-radio ,
+.Form-Info .Form-checkbox {
   @apply accent-blue-400
 }
 .Form-Light .Form-input,
 .Form-Light .Form-textarea,
-.Form-Light .Form-select {
+.Form-Light .Form-select,
+.Form-Light .Form-date {
   @apply focus:border-gray-200 focus:ring-gray-200
 }
-.Form-Light .Form-radio {
+.Form-Light .Form-radio ,
+.Form-Light .Form-checkbox {
   @apply accent-gray-400
 }
 .Form-Dark .Form-input,
 .Form-Dark .Form-textarea,
-.Form-Dark .Form-select {
+.Form-Dark .Form-select,
+.Form-Dark .Form-date {
   @apply focus:border-gray-800 focus:ring-gray-800
 }
-.Form-Dark .Form-radio {
+.Form-Dark .Form-radio ,
+.Form-Dark .Form-checkbox {
   @apply  accent-gray-800
 }
 

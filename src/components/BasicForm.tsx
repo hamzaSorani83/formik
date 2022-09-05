@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import FormControl from './Formik/FormControl/FormControl';
 import Form, { IForm } from './Formik/FormComponent'
 import { IRadioOption } from './Formik/FormControl/Controls/Radio';
+import { ICheckboxOptions } from './Formik/FormControl/Controls/Checkbox';
 
 interface IFormData {
   name: string;
@@ -20,6 +21,8 @@ interface IFormData {
   phNumbers: [string],
   radioOption: string;
   selectMenu: string;
+  checkbox: string[];
+  date: Date;
 }
 
 const BasicForm = () => {
@@ -31,6 +34,13 @@ const BasicForm = () => {
     {key: 'Option2', value: 'rOption2'},
     {key: 'Option3', value: 'rOption3'},
   ]
+  
+  const checkboxOptions: ICheckboxOptions[] = [
+    { key: 'COption1', value: 'COption1' },
+    { key: 'COption2', value: 'COption2' },
+    { key: 'COption3', value: 'COption3' },
+  ];
+  
   
   const selectMenu: string[] = ['option1', 'option2', 'option3'];
   
@@ -48,6 +58,8 @@ const BasicForm = () => {
     phNumbers: [''],
     radioOption: '',
     selectMenu: '',
+    checkbox: [],
+    date:  new Date(),
   }
   
   const onSubmit = (data: IFormData, actions: any) => {
@@ -120,6 +132,14 @@ const BasicForm = () => {
               <FormControl
                 control='select' name='selectMenu'
                 label='Select Menu:' options={selectMenu}
+              />
+              <FormControl
+                control='checkbox' name='checkbox'
+                label='checkbox:' options={checkboxOptions}
+              />
+              <FormControl
+                control='date' name='date' placeholder="select date"
+                label='date:' type='date'
               />
               <Button type='submit' varient={varient} disabled={formik.isSubmitting || !formik.isValid}>
                 submit
