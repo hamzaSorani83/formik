@@ -4,13 +4,18 @@ import { IForm } from '../../FormComponent'
 
 interface IProps {
   varient: IForm["varient"];
+  className?: string;
+  parentClassName?: string;
+  [rest: string]: any;
 }
 
-const Search:React.FC<IProps> = ({varient}) => {
+const Search: React.FC<IProps> = ({ varient, className, parentClassName, ...rest }) => {
+  className = ["Form-input py-3", className].join(" ");
+  parentClassName = ["relative mt-2", parentClassName].join(" ");
   return (
-    <div className="relative mt-2">
-    <input type="search" className="Form-input" placeholder="Search Mockups, Logos..." required />
-    <Button type='button' varient={varient} className="font-normal px-3 py-2 text-sm rounded-lg absolute right-2.5 bottom-1.5 capitalize">Search</Button>
+    <div className={parentClassName}>
+    <input type="search" className={className} {...rest}  />
+    <Button type='button' varient={varient} className="font-normal px-3 py-2 text-sm rounded-lg absolute right-2.5 bottom-2.5 capitalize">Search</Button>
   </div>
   )
 }
